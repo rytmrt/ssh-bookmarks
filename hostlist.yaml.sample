@@ -1,0 +1,18 @@
+###
+### hostlist.yaml.sample
+###
+
+# example.com
+# using ssh key login.
+example:
+  :host: example.com
+  :port: 22
+  :user: root
+  :ssh_key: ~/.ssh/id_rsa
+
+# 192.168.0.1
+# using password login.
+ip1:
+  :host: 192.168.0.1
+  :port: 22
+  :user: root
