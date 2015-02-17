@@ -3,7 +3,7 @@ require 'optparse'
 require 'yaml'
 
 PROJCT_ROOT    = File.expand_path(File.dirname(__FILE__))
-HOST_LIST_PATH = "#{PROJCT_ROOT}/hostlist.yaml"
+HOST_LIST_PATH = "#{PROJCT_ROOT}/bookmarks.yaml"
 HOST_LIST = YAML.load_file(HOST_LIST_PATH)
 
 def showHostList
@@ -21,8 +21,8 @@ OptionParser.new do |opt|
 end
 
 if ! File.exist?(HOST_LIST_PATH) then
-  puts "Not exist '#{HOST_LIST_PATH}/hostlist.yaml'."
-  puts "Please create or copy '#{HOST_LIST_PATH}/hostlist.yaml.sample'."
+  puts "Not exist '#{HOST_LIST_PATH}'."
+  puts "Please create or copy '#{HOST_LIST_PATH}.sample'."
   exit
 end
 
